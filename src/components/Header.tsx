@@ -10,6 +10,16 @@ export function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
+    if (id === "hero") {
+  // Compensate for Hero's marginTop visually, scroll just enough to show full Hero
+  const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = elementPosition - 100; // 100 matches your Hero marginTop
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+}
+
   };
 
   return (
@@ -20,7 +30,7 @@ export function Header() {
           className="text-[#00ff00] hover:text-[#00ff00] transition-colors flex items-center gap-2 glow"
         >
           <Terminal size={20} />
-          <span>~/portfolio</span>
+          <span>portfolio</span>
         </button>
 
         {/* Desktop Navigation */}
