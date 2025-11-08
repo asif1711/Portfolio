@@ -1,3 +1,5 @@
+import { Uptime } from "@/pages/Uptime";
+
 export function Footer() {
   return (
     <footer className="border-t border-[#00ff00] py-6 px-6 bg-black">
@@ -5,16 +7,16 @@ export function Footer() {
         <div className="text-[#00aa00] space-y-2">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <span className="text-[#00ff00]">user@matrix</span>:~$ date
+              <span className="text-[#00ff00]">Nurul Islam</span>
             </div>
             <div>
               © {new Date().getFullYear()} - All rights reserved
             </div>
           </div>
           <div className="text-sm">
-            &gt; System uptime: {Math.floor(Math.random() * 999)} days
+            <Uptime />
           </div>
-          <div className="text-sm">
+          <div className="text-sm mt-1 glow">
             &gt; Status: OPERATIONAL
           </div>
         </div>
