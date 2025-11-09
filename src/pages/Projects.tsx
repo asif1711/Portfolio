@@ -4,10 +4,10 @@ import { ExternalLink } from 'lucide-react';
 export function Projects() {
   const projects = [
     {
-      title: 'Modern Web Platform',
-      description: 'A comprehensive web application built with React and TypeScript, featuring real-time updates and a beautiful UI.',
-      image: 'https://images.unsplash.com/photo-1677469684186-3b1817bce098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzYyMDExNTE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'TypeScript', 'Tailwind']
+      title: 'Internship Online Store',
+      description: 'A traditional website built with HTML/CSS and JavaScript, featuring Bootstrap 5 framework, a WhatsApp API and a beautiful UI.',
+      image: '/images/project1.png',
+      tags: ['HTML','CSS','JavaScript']
     },
     {
       title: 'Mobile App Design',
@@ -34,12 +34,14 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project, index) => (
             <div key={index} className="group border border-[#00ff00] bg-[#001a00]/50 hover:bg-[#001a00] transition-all hover:shadow-[0_0_20px_rgba(0,255,0,0.3)]">
-              <div className="relative aspect-video overflow-hidden border-b border-[#00ff00]">
+              <div className="relative overflow-hidden border-b border-[#00ff00] h-96">
                 <ImageWithFallback 
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
-                  style={{ filter: 'grayscale(100%) sepia(100%) hue-rotate(50deg) saturate(400%)' }}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  style={{ filter: 'brightness(1.05) contrast(1.05)' }}
                 />
                 <div className="absolute top-2 right-2">
                   <ExternalLink size={18} className="text-[#00ff00] glow" />
