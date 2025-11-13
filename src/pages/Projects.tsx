@@ -1,3 +1,9 @@
+import project1 from "../images/project1.png";
+import project2 from "../images/project2.png";
+import project3 from "../images/project3.png";
+import project4 from "../images/project4.png";
+
+
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ExternalLink } from "lucide-react";
 
@@ -7,7 +13,7 @@ export function Projects() {
       title: "Internship Online Store",
       description:
         "A traditional website built with HTML/CSS and JavaScript, featuring Bootstrap 5 framework, a WhatsApp API and a handcrafted UI.",
-      image: "/images/project1.png",
+      image: project1,
       link: "https://github.com/asif1711/internship_online_store", // ✅ unique link
       tags: ["HTML", "CSS", "JavaScript"],
     },
@@ -15,7 +21,7 @@ export function Projects() {
       title: "Ecommerce Tea Store",
       description:
         "Complete UI/UX design for a website, from wireframes to high-fidelity prototypes. Back-end support with transport and online payment logistics.",
-      image: "/images/project2.png",
+      image: project2,
       link: "https://github.com/asif1711/ecom_website", // ✅ another unique link
       tags: ["UI/UX", "Prototype", "Back-end", "API"],
     },
@@ -23,8 +29,7 @@ export function Projects() {
       title: "VIP Event Access Portal",
       description:
         "A highly secured platform to provide access to multiple events according to event manager guidelines. It primarily uses SMS-based verification alongside various hard-gated security standards.",
-      image:
-        "/images/project3.png",
+      image:project3,
       link: "https://github.com/asif1711/esdv0.1", // ✅ another unique link
       tags: ["PHP","Hashing","Twilio SDK","MariaDB","HTML/CSS/JavaScript"],
     },
@@ -32,8 +37,7 @@ export function Projects() {
       title: "IBM Cloud Project",
       description:
         "A project performed on IBM cloud with IBM Watson and Python. Created a ChatBot, performed data representation, predictions and classification with IBM AI model.",
-      image:
-        "/images/project4.png",
+      image:project4,
       link: "https://github.com/asif1711/IBM_Watson_Project", // ✅ another unique link
       tags: ["Python","Cloud","IBM Watson","AI/ML"],
     }

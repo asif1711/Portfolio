@@ -1,5 +1,5 @@
-import { customIcons } from '../../public/icons/customIcons';
-import { LinkedInIcon } from '../../public/icons/LinkedInIcon';
+import { customIcons } from '../../src/icons/customIcons';
+import { LinkedInIcon } from '../../src/icons/LinkedInIcon';
 import { SimpleIcon } from '../components/SimpleIcon';
 
 export function Contact() {
@@ -49,7 +49,7 @@ export function Contact() {
   className="transition-all group-hover:drop-shadow-[0_0_6px_#00ff00]"
 />
               <div>
-                <div className="text-[#00ff00]">Github</div>
+                <div className="text-[#00ff00]">GitHub</div>
                 <div className="text-sm">View</div>
               </div>
             </a>
