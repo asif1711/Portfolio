@@ -5,6 +5,7 @@ import { Hero } from "@/pages/Hero";
 import { About } from "@/pages/About";
 import { Skills } from "@/pages/Skills";
 import { Projects } from "@/pages/Projects";
+import { Certificates } from "@/pages/Certificates";
 import { Contact } from "@/pages/Contact";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/certifications" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

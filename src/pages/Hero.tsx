@@ -35,15 +35,19 @@ export function Hero() {
       switch (cmd) {
         case "about":
           navigate("/about");
-          setCommandHistory((prev) => [...prev, "> Navigating to about page..."]);
+          setCommandHistory((prev) => [...prev, "> Navigating to about me..."]);
           break;
         case "skills":
           navigate("/skills");
-          setCommandHistory((prev) => [...prev, "> Navigating to skills page..."]);
+          setCommandHistory((prev) => [...prev, "> Navigating to skills set..."]);
           break;
         case "projects":
           navigate("/projects");
-          setCommandHistory((prev) => [...prev, "> Navigating to projects page..."]);
+          setCommandHistory((prev) => [...prev, "> Navigating to my projects..."]);
+          break;
+        case "cert":
+          navigate("/certifications");
+          setCommandHistory((prev) => [...prev, "> Navigating to certifications..."]);
           break;
         case "contact":
           navigate("/contact");
@@ -52,7 +56,7 @@ export function Hero() {
         case "help":
           setCommandHistory((prev) => [
             ...prev,
-            "> Available commands: about, skills, projects, contact, clear",
+            "> Available commands: about, skills, projects, cert, contact, clear",
           ]);
           break;
         case "clear":
@@ -108,6 +112,7 @@ export function Hero() {
               <div>&gt; about - Learn more about me</div>
               <div>&gt; skills - View technical expertise</div>
               <div>&gt; projects - See my work</div>
+               <div>&gt; cert - Check my certifications</div>
               <div>&gt; contact - Get in touch</div>
               <div>&gt; clear - Clear terminal</div>
             </div>

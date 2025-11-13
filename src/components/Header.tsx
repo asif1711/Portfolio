@@ -17,7 +17,7 @@ export function Header() {
           className="text-[#00ff00] hover:text-[#00ff00] transition-colors flex items-center gap-2 glow"
         >
           <Terminal size={20} />
-          <span>portfolio</span>
+          <span>  portfolio</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,6 +43,13 @@ export function Header() {
           >
             $ projects
           </Link>
+          <Link
+            to="/certifications"
+            className="text-[#00aa00] hover:text-[#00ff00] transition-colors hover:glow"
+          >
+            $ certifications
+          </Link>
+
           <Link
             to="/contact"
             onClick={closeMenu}

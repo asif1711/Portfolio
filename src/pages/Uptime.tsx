@@ -3,26 +3,38 @@ import { useEffect, useState } from "react";
 export function Uptime() {
   const [uptime, setUptime] = useState("");
 
+  // Konami Code Sequence
+  const KONAMI = [
+    "@",
+    "n",
+    "o",
+    "o",
+    "d",
+    "l",
+    "e",
+    "z",
+    "*",
+  ];
+
+  let position = 0;
+
   useEffect(() => {
     let startTime = localStorage.getItem("siteStartTime");
     let start: number;
 
     if (!startTime) {
-  const start = new Date("2025-11-07T02:05:00Z").getTime(); // UTC time
-  localStorage.setItem("siteStartTime", start.toString());
-  startTime = start.toString();
-    }else {
-      // ✅ read from storage safely
+      start = new Date("2025-11-07T02:05:00Z").getTime();
+      localStorage.setItem("siteStartTime", start.toString());
+    } else {
       start = parseInt(startTime, 10);
       if (isNaN(start)) {
-        // fallback fix if somehow corrupted
         start = Date.now();
         localStorage.setItem("siteStartTime", start.toString());
       }
     }
 
     const update = () => {
-      const diff = Math.floor((Date.now() - start) / 1000); // seconds elapsed
+      const diff = Math.floor((Date.now() - start) / 1000);
       const days = Math.floor(diff / 86400);
       const hours = Math.floor((diff % 86400) / 3600);
       const minutes = Math.floor((diff % 3600) / 60);
@@ -42,7 +54,36 @@ export function Uptime() {
 
     update();
     const timer = setInterval(update, 1000);
-    return () => clearInterval(timer);
+
+    //KONAMI CODE LISTENER
+    const keyListener = (e: KeyboardEvent) => {
+      const key = e.key;
+
+      // Check if the key matches the required Konami sequence
+      if (key === KONAMI[position]) {
+        position++;
+
+        // Completed sequence!
+        if (position === KONAMI.length) {
+          const newStart = Date.now();
+          localStorage.setItem("siteStartTime", newStart.toString());
+          start = newStart;
+
+          alert("🟢 Konami Code Activated! Uptime Reset.");
+          position = 0; // reset sequence
+        }
+      } else {
+        // Wrong key → restart tracking
+        position = 0;
+      }
+    };
+
+    window.addEventListener("keydown", keyListener);
+
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("keydown", keyListener);
+    };
   }, []);
 
   return (
