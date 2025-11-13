@@ -1,68 +1,94 @@
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { customIcons } from '../../public/icons/customIcons';
+import { LinkedInIcon } from '../../public/icons/LinkedInIcon';
+import { SimpleIcon } from '../components/SimpleIcon';
 
 export function Contact() {
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-4xl mx-auto w-full">
         <div className="border border-[#00ff00] p-6 bg-[#001a00]/30">
-          <h2 className="text-[#00ff00] mb-6 glow">CONTACT</h2>
-          
+         <h2
+            className="text-[#00ff00] mb-4 glow font-extrabold tracking-wide"
+            style={{ fontSize: "1.5rem" }}
+          >
+            CONTACT ME
+          </h2>          
           <div className="text-[#00aa00] mb-8">
             <p className="mb-2">&gt; Initializing communication protocols...</p>
-            <p className="mb-2">&gt; Connection status: READY</p>
-            <p>&gt; I'm always interested in hearing about new projects and opportunities.</p>
+            <p className="text-[#00ff00] mb-2 glow">&gt; Connection status: READY</p>
+            <p>&gt; I'm always interested in new projects and opportunities.</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:asif17111998@gmail.com" 
               className="flex items-center gap-3 p-4 border border-[#00ff00] text-[#00aa00] hover:text-[#00ff00] hover:bg-[#001a00] transition-all hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
             >
-              <Mail size={20} />
+              <SimpleIcon
+  path={customIcons.gmail.path}
+  size={20}
+  color="#00ff00"
+  className="transition-all group-hover:drop-shadow-[0_0_6px_#00ff00]"
+/>
               <div>
-                <div className="text-[#00ff00]">EMAIL</div>
-                <div className="text-sm">your.email@example.com</div>
+                <div className="text-[#00ff00]">Email</div>
+                <div className="text-sm">asif17111998@gmail.com</div>
               </div>
             </a>
             
             <a 
-              href="https://github.com" 
+              href="https://github.com/asif1711/" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 border border-[#00ff00] text-[#00aa00] hover:text-[#00ff00] hover:bg-[#001a00] transition-all hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
             >
-              <Github size={20} />
+               <SimpleIcon
+  path={customIcons.github.path}
+  size={20}
+  color="#00ff00"
+  className="transition-all group-hover:drop-shadow-[0_0_6px_#00ff00]"
+/>
               <div>
-                <div className="text-[#00ff00]">GITHUB</div>
-                <div className="text-sm">github.com/username</div>
+                <div className="text-[#00ff00]">Github</div>
+                <div className="text-sm">View</div>
               </div>
             </a>
             
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/nurulislam1711/" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 border border-[#00ff00] text-[#00aa00] hover:text-[#00ff00] hover:bg-[#001a00] transition-all hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
             >
-              <Linkedin size={20} />
+               <LinkedInIcon
+    size={20}
+    color="#00ff00"
+    className="transition-all group-hover:drop-shadow-[0_0_6px_#00ff00]"
+  />
               <div>
-                <div className="text-[#00ff00]">LINKEDIN</div>
-                <div className="text-sm">linkedin.com/in/username</div>
+                <div className="text-[#00ff00]">LinkedIn</div>
+                <div className="text-sm">Connect</div>
               </div>
             </a>
             
             <a 
-              href="https://twitter.com" 
+              href="https://wa.me/919875535211" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 border border-[#00ff00] text-[#00aa00] hover:text-[#00ff00] hover:bg-[#001a00] transition-all hover:shadow-[0_0_15px_rgba(0,255,0,0.3)]"
             >
-              <Twitter size={20} />
+            
+              <SimpleIcon
+  path={customIcons.whatsapp.path}
+  size={20}
+  color="#00ff00"
+/>
               <div>
-                <div className="text-[#00ff00]">TWITTER</div>
-                <div className="text-sm">@username</div>
+                <div className="text-[#00ff00]">WhatsApp</div>
+                <div className="text-sm">Text</div>
               </div>
             </a>
+
           </div>
 
           <div className="border border-[#00ff00] p-4 bg-[#001a00]/50">
